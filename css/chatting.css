@@ -1,0 +1,224 @@
+.chatting-body {
+  padding: 0;
+}
+
+.chatting-screen {
+  width: 100%;
+  height: 700px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.537) 20%
+    ),
+    url("https://cdn.pixabay.com/photo/2013/06/08/17/09/divers-123286_960_720.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.message__list {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message__list .message__time {
+  padding: 5px 10px;
+  background-color: #aab1b6;
+  border-radius: 2em;
+  color: white;
+  box-shadow: inset 0px 2px 10px rgba(255, 255, 255, 0.74),
+    0px 3px 2px rgba(0, 0, 0, 0.17);
+  margin-bottom: 30px;
+}
+
+.receive {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.message__list .receive__column:first-child {
+  display: flex;
+}
+
+.receive__column:first-child .receive__contents {
+  padding-top: 7px;
+  margin-left: 10px;
+}
+
+.receive__column:first-child .receive__contents .receive__author {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.receive__column:first-child .receive__contents .receive__msg {
+  display: block;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-radius: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 7px;
+  box-shadow: inset -1px -1px 5px rgba(71, 62, 9, 0.74),
+    0px 3px 2px rgba(0, 0, 0, 0.17);
+}
+
+.receive__column:first-child .receive__contents .receive__msg.first {
+  border-top-left-radius: 0;
+}
+
+.receive__column:last-child .timestamp {
+  opacity: 0.7;
+  margin-left: 7px;
+}
+
+.message__list .send {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.message__list .send .send__column:first-child .alarm {
+  color: blue;
+}
+
+.message__list .send .send__column:first-child .message__times {
+  opacity: 0.7;
+  margin-right: 7px;
+}
+
+.message__list .send .send__column:last-child .send__contents {
+  display: block;
+  background-color: #ffeb34;
+  padding: 10px 20px;
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  box-shadow: inset -1px -1px 5px rgba(71, 62, 9, 0.74),
+    0px 3px 2px rgba(0, 0, 0, 0.17);
+}
+
+.message__list .send .send__column:last-child .send__contents.first {
+  border-top-right-radius: 0;
+}
+
+.chat__write-container {
+  height: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.chat__write {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 0;
+  padding: 20px 60px;
+  border: none;
+  font-size: 14px;
+  box-shadow: none;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+.chat__icon {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.chat__write:focus {
+  outline: none;
+  width: 80%;
+  transform: translateY(-100px);
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.17);
+  border-radius: 2em;
+  animation: flow 2s infinite ease-in-out;
+}
+
+@keyframes flow {
+  0%,
+  100% {
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.17);
+    transform: translateY(-100px);
+  }
+  50% {
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.555);
+    transform: translateY(-110px);
+  }
+}
+
+.chat__write:focus ~ .chat__icon {
+  opacity: 0;
+}
+
+.chat__write__icon-left {
+  position: absolute;
+}
+
+.chat__write__icon-right {
+  position: absolute;
+  right: 10px;
+}
+
+.receive__avatar {
+  animation: avatar-spin 2s infinite ease-in-out;
+}
+
+@keyframes avatar-spin {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateY(1turn);
+  }
+}
+
+.receive {
+  animation: leftIn 1s linear;
+}
+
+@keyframes leftIn {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.send {
+  animation: RightIn 1s linear;
+}
+
+@keyframes RightIn {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
