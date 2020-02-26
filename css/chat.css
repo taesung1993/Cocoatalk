@@ -1,0 +1,41 @@
+.chats__list {
+  padding: 10px 0px;
+}
+
+.chats__list .chats__list-chat .chats__list-link {
+  width: 100%;
+}
+
+.chats__list .chats__list-chat {
+  margin: 15px 0;
+}
+
+.chats__list .chats__list-chat .chats__list-link,
+.chats__list-link .chats-column:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chats__list-link .chats-column:first-child .g-avatar {
+  width: 55px;
+  height: 55px;
+}
+
+.chats-column:first-child .chats__contents {
+  margin-left: 10px;
+}
+
+.chats-column:first-child .chats__contents .chats__name {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.chats-column:first-child .chats__contents .chats__preview {
+  display: block;
+  opacity: 0.7;
+}
+
+.chats-column:last-child .chat__times {
+  opacity: 0.7;
+}
