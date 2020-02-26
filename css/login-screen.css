@@ -1,0 +1,145 @@
+.login-screen {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 175px;
+}
+
+.login-screen .login__login-logo {
+  width: 171px;
+  height: 169px;
+  background-image: url("../images/mylogo.png");
+  margin-bottom: 50px;
+}
+
+.login {
+  width: 243px;
+}
+
+.login-screen .login__login-write {
+  height: 70px;
+  border: 1px solid #e5d32e;
+  border-radius: 2px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.login__login-write .login__write {
+  width: 100%;
+  height: 50%;
+  padding: 5px 12px 5px 7px;
+  display: flex;
+  align-items: center;
+}
+
+.login__login-write .login__write:first-child {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.login__write input {
+  width: 100%;
+  border: none;
+}
+
+.login__write input:focus {
+  outline: none;
+}
+
+.login__write input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.login__login-btn {
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid #e5d32e;
+  overflow: hidden;
+  margin: 7px 0 4px 0;
+}
+
+.login__login-btn input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: #3f2222;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 150%;
+  color: white;
+}
+
+.login__login-btn.login {
+  box-shadow: none;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.login__login-btn.login:hover {
+  box-shadow: 0px 2px 5px rgba(10, 10, 10, 0.356);
+}
+
+.login__login-btn.login:hover > a > input {
+  background-color: #f6f6f6;
+  color: rgb(20, 20, 20);
+}
+
+.login-screen .login__auto-box {
+  position: relative;
+}
+
+.login-screen .login__auto-box input[type="checkbox"] {
+  display: none;
+}
+
+.login__auto-box input[type="checkbox"] + label {
+  position: relative;
+  cursor: pointer;
+}
+
+.login__auto-box input[type="checkbox"] + label:before {
+  position: absolute;
+  top: 3px;
+  left: 1px;
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 1px solid #e5d32e;
+  background-color: white;
+  vertical-align: center;
+  text-align: center;
+  font-size: 9px;
+  line-height: 7px;
+}
+
+.login__auto-box input[type="checkbox"]:checked + label:before {
+  position: absolute;
+  display: inline-block;
+  bottom: 2px;
+  text-align: center;
+  content: "\2714";
+  margin-right: 1px;
+}
+
+.login__auto-box .checkbox-msg {
+  position: absolute;
+  top: 1.5px;
+  left: 20px;
+}
+
+.login-screen {
+  transform: none;
+  animation: screenIn 0.5s linear forwards;
+}
+
+@keyframes screenIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
